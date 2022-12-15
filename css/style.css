@@ -280,19 +280,23 @@ img {
     color: var(--accent-color);
 }
 
-.page-item-active::after {
+.page-item-active {
+    position: relative;
+}
+
+.link-active::after {
     content: '';
     display: block;
     width: 100%;
     height: 4px;
     border-radius: 2px;
     background-color: var(--accent-color);
-    opacity: 0;   
+    position: absolute;  
+    bottom: 0;
+    left: 0;
 }
 
-.page-item-active ::after:active .heder-link{
-    opacity: 1;
-} 
+
 
 /* ----------- HERO ---------- */
 
@@ -404,10 +408,34 @@ img {
 }
 
 
+/* ----------- about ---------- */
+
 .about {
     background: var(--primary-header-color);
     padding: 0px 0px 94px;
+}
 
+.about-thumb {
+    position: relative;
+}
+
+
+.about-cover-text {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    color: var(--primary-header-color);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    background-color: rgba(47, 48, 58, 0.8);
+    padding: 27px 0;
+
+    display: inline-block;
+    text-align: center;
+   
 }
 
 .about-title  {
@@ -844,4 +872,56 @@ margin-right: auto;
 .footer-soc-link:hover,
 .footer-soc-link:focus  {
     background-color: var(--accent-color);
+}
+
+
+
+/* ----------- backdrop ---------- */
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: opacity 250ms linear, visibility 300ms linear;
+}
+
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    border-radius: 4px;
+    width: 528px;
+    min-height: 581px;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    transition: transform 300ms linear rotate (0);
+}
+
+.backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0) rotate(-180deg);
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: var(--background-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+
+.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
 }
