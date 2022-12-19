@@ -201,9 +201,9 @@ img {
 }
 
 .head-icons {
-    fill: var(--icon-color);
+    fill: var(--main-text-color);
     margin-right: 10px;
-    color: var(--main-text-color);
+
 }
 
 .icon-email  {
@@ -230,6 +230,7 @@ img {
     letter-spacing: 0.02em;
     padding:32px 0;
     background-position:  center;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -258,6 +259,10 @@ img {
     letter-spacing: 0.02em;
 
     display: flex;
+}
+
+.head-icons-link {
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-email {
@@ -342,6 +347,7 @@ img {
     background-color:var(--accent-color);
     padding: 10px 32px;
     border: none;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -521,6 +527,7 @@ img {
     justify-content: center;
     align-items: center;
     border-radius: 50%;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .developers-soc-items:not(:last-child) {
@@ -577,6 +584,7 @@ img {
     border: 1px solid var(--icon-color);
     justify-content: center;
     border-radius: 4px;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -591,6 +599,7 @@ img {
 
 .clients-link:hover .clients-icons {
    fill: var(--accent-color);
+  
 }
 
 .clients-link:hover,
@@ -640,6 +649,7 @@ padding: 94px 0px;
     border: none;
     letter-spacing: 0.03em;
     margin: 0px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -710,6 +720,9 @@ padding: 94px 0px;
     transform: translateY(0);
 }
 
+.resume-item:focus .resume-cover-text {
+    transform: translateY(0);
+}
 .conteiner >.resume-list > .resume-item {
     flex-basis: calc(100% / 3 - 60px);
 
@@ -805,6 +818,9 @@ address ul li:not(:last-child) {
     margin-bottom: 20px;
 }
 
+.footer-link {
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 .footer-link:hover,
 .footer-link:focus  {
 color: var(--accent-color);
@@ -851,6 +867,7 @@ margin-right: auto;
     align-items: center;
     display: flex;
     justify-content: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-soc-icons {
@@ -924,4 +941,8 @@ margin-right: auto;
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+}
+
+.button-close {
+    cursor: pointer;
 }
