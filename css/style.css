@@ -943,6 +943,6 @@ margin-right: auto;
     pointer-events: none;
 }
 
-.button-close {
+.modal-close {
     cursor: pointer;
 }
